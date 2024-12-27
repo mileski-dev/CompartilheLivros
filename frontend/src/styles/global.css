@@ -1,0 +1,108 @@
+body {
+    background-color: #e9ecef; /* Fundo cinza suave */
+    color: #333; /* Texto mais escuro */
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Estilização para o cabeçalho */
+header {
+    background-color: #343a40; /* Fundo escuro */
+    color: white;
+    padding: 20px;
+    border-bottom: 2px solid #ff6f61; /* Destaque na borda inferior */
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+header p.lead {
+    font-size: 1.2rem;
+    color: #d1d1d1;
+}
+
+header nav a,
+header nav button {
+    font-size: 1rem;
+    font-weight: bold;
+    margin: 0 10px;
+}
+
+a.btn {
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+.navbar {
+    border-bottom: 2px solid #ff6f61; /* Adicionar destaque no cabeçalho */
+}
+
+.card {
+    background-color: #ffffff; /* Fundo branco nos cards */
+    border: 1px solid #ced4da; /* Bordas suaves */
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Sombra leve */
+}
+
+.btn-primary {
+    background-color: #ff6f61; /* Cor personalizada para o botão */
+    border-color: #ff6f61;
+}
+
+.btn-primary:hover {
+    background-color: #e65c50; /* Alterar cor ao passar o mouse */
+    border-color: #e65c50;
+}
+
+.books-page {
+    background-color: #f4f8fb; /* Azul claro suave */
+    min-height: 100vh; /* Garante que o fundo cubra a página inteira */
+    padding: 20px; /* Espaçamento ao redor */
+}
+
+.books-title {
+    color: #007bff; /* Azul para o título */
+    font-weight: bold; /* Negrito */
+    text-align: center; /* Centralizar o texto */
+    margin-bottom: 30px; /* Espaçamento abaixo */
+}
+
+/* Estilização para o fundo da página */
+.add-book-page {
+    background-color: #f4f8fb; /* Azul claro suave */
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Estilização do título */
+.add-book-title {
+    color: #007bff; /* Azul vibrante */
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* Estilização do formulário */
+.add-book-form {
+    background-color: #ffffff; /* Fundo branco */
+    border: 1px solid #ced4da; /* Borda suave */
+    border-radius: 8px;
+    padding: 20px;
+    max-width: 600px;
+    margin: 0 auto; /* Centralizar */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Sombra leve */
+}
+
+a.text-info {
+    font-weight: bold;
+    text-decoration: none;
+}
+
+a.text-info:hover {
+    text-decoration: underline;
+}
+
