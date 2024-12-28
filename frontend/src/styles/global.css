@@ -1,5 +1,5 @@
 body {
-    background-color: #e9ecef; /* Fundo cinza suave */
+    background: linear-gradient(135deg, #f9f9f9, #e6e6e6); /* Fundo com gradiente suave */
     color: #333; /* Texto mais escuro */
     margin: 0;
     font-family: 'Arial', sans-serif;

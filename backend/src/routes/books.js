@@ -6,8 +6,8 @@ const mailgun = require('mailgun-js');
 const User = require('../models/user'); // Modelo do Usuário
 
 // Configuração do Mailgun
-const DOMAIN = 'sandbox181ed68c401f49c7a67220e5c33e5426.mailgun.org'; 
-const apiKey = process.env.MAILGUN_API_KEY; // API Key configurada no .env
+const DOMAIN = process.env.MAILGUN_DOMAIN;
+const apiKey = process.env.MAILGUN_API_KEY; 
 const mg = mailgun({ apiKey, domain: DOMAIN });
 
 // Middleware de configuração para evitar crashes por erro não tratado
@@ -149,6 +149,25 @@ router.delete('/:id', authenticateToken, async (req, res) => {
     } catch (error) {
         console.error('Erro ao excluir o livro:', error.message);
         res.status(500).json({ message: 'Erro ao excluir o livro.' });
+    }
+});
+
+// Rota para exclusão de livros por um administrador
+router.delete('/admin/books/:id', authenticateToken, async (req, res) => {
+    try {
+        // Verificar se o usuário é administrador
+        const user = await User.findById(req.user.id);
+        if (!user || !user.isAdmin) {
+            return res.status(403).send({ message: 'Acesso negado' });
+        }
+
+        const book = await Book.findByIdAndDelete(req.params.id);
+        if (!book) {
+            return res.status(404).send({ message: 'Livro não encontrado' });
+        }
+        res.status(200).send({ message: 'Livro deletado com sucesso!' });
+    } catch (error) {
+        res.status(500).send({ error: 'Erro ao deletar o livro' });
     }
 });
 

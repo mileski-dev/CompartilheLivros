@@ -6,6 +6,7 @@ import BooksList from './pages/BooksList';
 import AddBook from './pages/AddBook';
 import Register from './pages/Register';
 import MyBooks from './pages/MyBooks';
+import AdminPanel from './pages/AdminPanel';
 
 const App = () => {
     const [isAuthenticated, setIsAuthenticated] = useState(false);
@@ -30,6 +31,7 @@ const App = () => {
                     <Route path="/login" element={<Login setAuth={setIsAuthenticated} />} />
                     <Route path="/books" element={<BooksList />} />
                     <Route path="/add-book" element={<AddBook />} />
+                    <Route path="/admin" element={<AdminPanel />} />
                     <Route path="/my-books" element={<MyBooks />} />;
                 </Routes>
             </main>

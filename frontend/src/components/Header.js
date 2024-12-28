@@ -21,7 +21,7 @@ const Header = ({ isAuthenticated, handleLogout }) => {
                     Compartilhe Livros
                 </h1>
                 <p className="lead" style={{ color: '#d1d1d1' }}>
-                    Troque e compartilhe conhecimento com a comunidade
+                Compartilhe Livros: Dividindo Conhecimento
                 </p>
                 
                 {/* Navegação */}
