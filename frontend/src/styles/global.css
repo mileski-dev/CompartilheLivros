@@ -106,3 +106,58 @@ a.text-info:hover {
     text-decoration: underline;
 }
 
+/* Media queries para telas menores que 768px */
+@media (max-width: 768px) {
+    body {
+        font-size: 14px;
+        margin: 10px;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    .card {
+        margin: 10px;
+        padding: 10px;
+        font-size: 0.9rem;
+    }
+
+    .books-title, .add-book-title {
+        font-size: 1.8rem;
+        margin-bottom: 20px;
+    }
+
+    .add-book-form {
+        width: 90%;
+        padding: 15px;
+    }
+
+    nav a, nav button {
+        font-size: 0.9rem;
+        padding: 5px;
+    }
+}
+
+/* Media queries para telas menores que 480px */
+@media (max-width: 480px) {
+    body {
+        font-size: 12px;
+    }
+
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    .card {
+        padding: 5px;
+    }
+
+    .books-title, .add-book-title {
+        font-size: 1.5rem;
+    }
+
+    nav a, nav button {
+        font-size: 0.8rem;
+    }
+}
