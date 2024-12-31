@@ -14,7 +14,7 @@ const Login = ({ setAuth }) => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const response = await axios.post('http://localhost:5000/users/login', form);
+            const response = await axios.post(`${process.env.REACT_APP_BACKEND_URL}/users/login`, form);
             const { token, email } = response.data;
 
             // Salvar o token no localStorage e autenticar

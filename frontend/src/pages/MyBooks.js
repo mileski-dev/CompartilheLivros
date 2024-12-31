@@ -15,7 +15,7 @@ const MyBooks = () => {
       }
 
       try {
-        const response = await axios.get('/books/my-books', {
+          const response = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/books/my-books`, {
           headers: { Authorization: `Bearer ${token}` },
         });
         setBooks(response.data);
@@ -34,8 +34,8 @@ const MyBooks = () => {
 
     try {
       const token = localStorage.getItem('token');
-      await axios.delete(`/books/${bookId}`, {
-        headers: { Authorization: `Bearer ${token}` },
+      await axios.delete(`${process.env.REACT_APP_BACKEND_URL}/books/${bookId}`, {
+      headers: { Authorization: `Bearer ${token}` },
       });
       setBooks(books.filter((book) => book._id !== bookId)); // Atualiza a lista após a exclusão
       alert('Livro excluído com sucesso!');

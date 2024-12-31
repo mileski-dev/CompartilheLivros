@@ -33,7 +33,7 @@ const BooksList = () => {
             if (search.author) params.author = search.author;
             if (search.city) params.city = search.city;
 
-            const response = await axios.get('http://localhost:5000/books', { params });
+            const response = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/books`, { params });
             setBooks(response.data);
         } catch (err) {
             console.error('Erro ao buscar livros:', err.response?.data || err.message);
@@ -63,7 +63,7 @@ const BooksList = () => {
         }
 
         try {
-            const response = await axios.post(`http://localhost:5000/books/${bookId}/message`, {
+            const response = await axios.post(`${process.env.REACT_APP_BACKEND_URL}/books/${bookId}/message`, {
                 email: userEmail,
                 message,
             });

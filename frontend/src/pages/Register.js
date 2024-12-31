@@ -13,7 +13,7 @@ const Register = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const response = await axios.post('http://localhost:5000/users/register', form);
+            const response = await axios.post(`${process.env.REACT_APP_BACKEND_URL}/users/register`, form);
             setMessage(response.data.message); // Exibe mensagem de sucesso
             setForm({ name: '', email: '', password: '' }); // Limpa o formulário
             setError(''); // Limpa mensagens de erro

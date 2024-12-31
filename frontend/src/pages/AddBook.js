@@ -19,7 +19,7 @@ const AddBook = () => {
                 },
             };
 
-            const response = await axios.post('http://localhost:5000/books', form, config);
+            const response = await axios.post(`${process.env.REACT_APP_BACKEND_URL}/books`, form, config);
             setMessage('Livro cadastrado com sucesso!');
             setForm({ title: '', author: '', genre: '', city: '' });
         } catch (error) {
